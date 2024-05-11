@@ -1,0 +1,137 @@
+@font-face{
+    font-family: 'prstart'; src: url('/assets/fonts/PrStart.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #000000; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'prstart', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spritePosition {
+    margin: 10px 0 0 10px;
+    font-size: 0.8em;
+}
+
+.button {
+    width: 140px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.87);
+    border: 1px solid rgba(255, 255, 255, 0.87);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+
+    &:hover {
+        border: 1px solid #0ec3c9;
+        color: #0ec3c9;
+    }
+
+    &:active {
+        background-color: #0ec3c9;
+    }
+
+    /* Disabled styles */
+    &:disabled {
+        cursor: not-allowed;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.selection-menu-wrapper {
+    max-width: 1200px;
+    margin: 16px auto;
+}
+
+.selection-menu-wrapper h1 {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.selection-menu-wrapper p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.selection-menu {
+    display: flex;
+    place-content: center;
+    gap: 24px;
+}
+
+.selection-menu > div {
+    flex: 1 1 50%;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.selection-menu h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.avatar-grid {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.avatar:focus:not(.avatar-selected) {
+    outline: #0ec3c980 6px solid;
+}
+
+.avatar-selected {
+    /* border: #0ec3c9 8px solid; */
+    outline: #0ec3c9 6px solid;
+    border-style: inset;
+}
+
+.select-wrapper {
+    margin: 16px 0;
+}
+
+.select-wrapper button {
+    margin-left: 8px;
+}
+
+.select-wrapper label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.start-button {
+    display: block;
+    margin: 24px auto;
+    font-size: 24px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
